@@ -42,52 +42,24 @@ main {
     margin-bottom: 20px;
 }
 
-.post h2 {
-    color: #0077cc;
-    margin-bottom: 10px;
+.show {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
-.date {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-
-.comments {
-    margin-top: 40px;
-}
-
-.comments h2 {
-    margin-bottom: 20px;
-}
-
-.comment {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-left: 5px solid #0077cc;
-}
-
-.comment-form h3 {
-    margin-bottom: 10px;
-}
-
-.comment-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-.comment-form button {
-    display: inline-block;
+.btnShow {
     background-color: #0077cc;
     color: white;
     padding: 10px 15px;
-    border: none;
-    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+    font-family: cursive;
+    border-radius: 10px;
+    margin: auto;
 }
 
-.comment-form button:hover {
+.btnShow:hover {
     background-color: #005fa3;
 }
 
