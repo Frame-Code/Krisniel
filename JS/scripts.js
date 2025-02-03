@@ -24,7 +24,7 @@ function stopAnimation(intervalID) {
 d.querySelector(".btnShow").addEventListener("click", function (e) {
   e.preventDefault(); // Prevent the form from submitting
 
-  let timeToStop = 1000;
+  let timeToStop = 3000;
   let intervalID = setInterval(createHeart, 100);
   setTimeout(() => {
     stopAnimation(intervalID);
@@ -42,13 +42,29 @@ d.querySelector(".btnFollow1").addEventListener("click", function (e) {
 
   let dayMet = d.querySelector(".inputDayMet").value;
   if (dayMet == "25") {
-    d.querySelector(".messageErrorOrCorrect").innerHTML =
+    d.querySelector(".messageErrorOrCorrect1").innerHTML =
       "<br/>Correct! 🎉🎉🎉";
     setTimeout(() => {
       d.querySelector(".formDayMet").style.display = "none";
       d.querySelector(".formDayAnniversary").style.display = "block";
     }, 1500);
   } else {
-    d.querySelector(".messageErrorOrCorrect").innerHTML = "<br/>Incorrect! 😒😒😒";
+    d.querySelector(".messageErrorOrCorrect1").innerHTML = "<br/>Incorrect! 😒😒😒";
+  }
+});
+
+d.querySelector(".btnFollow2").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  let dayAnniversary = d.querySelector(".inputDayAnniversary").value;
+  if (dayAnniversary == "25") {
+    d.querySelector(".messageErrorOrCorrect2").innerHTML =
+      "<br/>Correct! 🎉🎉🎉";
+    setTimeout(() => {
+      d.querySelector(".formDayAnniversary").style.display = "none";
+      d.querySelector(".formDayKiss").style.display = "block";
+    }, 1500);
+  } else {
+    d.querySelector(".messageErrorOrCorrect2").innerHTML = "<br/>Incorrect! 😒😒😒";
   }
 });
