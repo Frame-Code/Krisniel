@@ -25,7 +25,7 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
   e.preventDefault(); // Prevent the form from submitting
 
   let timeToStop = 3000;
-  let intervalID = setInterval(createHeart, 100);
+  let intervalID = setInterval(createHeart, 90);
   setTimeout(() => {
     stopAnimation(intervalID);
   }, timeToStop);
@@ -66,5 +66,21 @@ d.querySelector(".btnFollow2").addEventListener("click", function (e) {
     }, 1500);
   } else {
     d.querySelector(".messageErrorOrCorrect2").innerHTML = "<br/>Incorrect! 😒😒😒";
+  }
+});
+
+d.querySelector(".btnFollow3").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  let dayKiss = d.querySelector(".inputDayKiss").value;
+  if (dayKiss == "02" || dayKiss == "2") {
+    d.querySelector(".messageErrorOrCorrect3").innerHTML =
+      "<br/>Correct! 🎉🎉🎉";
+    setTimeout(() => {
+      d.querySelector(".formDayKiss").style.display = "none";
+      //d.querySelector("").style.display = "block";
+    }, 1500);
+  } else {
+    d.querySelector(".messageErrorOrCorrect3").innerHTML = "<br/>Incorrect! 😒😒😒";
   }
 });
