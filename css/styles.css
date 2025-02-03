@@ -48,18 +48,20 @@ main {
     align-items: center;
 }
 
-.btnShow {
+button {
     background-color: #0077cc;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 18px;
     text-decoration: none;
     margin-bottom: 20px;
     font-family: cursive;
     border-radius: 10px;
     margin: auto;
+    border: 1px;
+    box-shadow: 3px 3px 3px #4a6e86;
 }
 
-.btnShow:hover {
+button:hover {
     background-color: #005fa3;
 }
 
@@ -73,9 +75,16 @@ main {
     overflow: hidden;
 }
 
-.love-message {
+.heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
+    color: #ff4081;
+    animation: floatUp 1.5s linear infinite;
+}
+
+.love-message, .formDayMet, .formDayAnniversary, .formDayKiss {
     position: fixed;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
@@ -89,12 +98,34 @@ main {
     animation: fadeIn 2s ease-in-out;
 }
 
-.heart {
-    position: absolute;
-    bottom: 0;
-    font-size: 24px;
-    color: #ff4081;
-    animation: floatUp 1.5s linear infinite;
+
+.love-message {
+    top: 15%;
+}
+
+.formDayMet, .formDayAnniversary, .formDayKiss {
+    top: 50%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btnFollow {
+    font-size: 20px;
+    padding: 10px 80px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
 }
 
 @keyframes floatUp {
@@ -132,12 +163,3 @@ main {
     }
 }
 
-
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
