@@ -21,6 +21,35 @@ function stopAnimation(intervalID) {
   clearInterval(intervalID);
 }
 
+function showLastMessage() {
+  if(window.matchMedia("(max-width: 768px)").matches) {
+    let collage = d.querySelector(".collage");
+    let imgCollage = d.querySelector(".imgCollage");
+    let textCollage = d.querySelector(".textCollage");
+    collage.style.display = "flex";
+    setTimeout( () => {
+      imgCollage.style.animation = "fadeOut 3s forwards";
+    }, 5000);
+    setTimeout( () => {
+      imgCollage.style.display = "none";
+      collage.style.display = "flex";
+      collage.style.flexDirection = "column"
+      collage.style.alignItems = "center";
+      collage.style.justifyContent = "center";
+      collage.style.height = "95%";
+      collage.style.gap = "20px";
+      textCollage.style.fontSize = "14px";
+      textCollage.style.display = "flex";
+      textCollage.style.marginLeft = "260px";
+      textCollage.style.marginTop = "409px";
+      textCollage.style.width = "100%";
+      textCollage.style.animation = "fadeIn 2s forwards";
+    }, 7000);
+  } else {
+    d.querySelector(".collage").style.display = "flex";
+  }
+}
+
 d.querySelector(".btnShow").addEventListener("click", function (e) {
   e.preventDefault(); // Prevent the form from submitting
 
@@ -33,13 +62,13 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
   // Show the message after the hearts stop floating
   setTimeout(() => {
     d.querySelector(".love-message").style.display = "block";
-    d.querySelector(".formDayMet").style.display = "block";
+    d.querySelector(".formDayMet").style.display = "block"; 
   }, timeToStop);
 });
 
 d.querySelector(".btnFollow1").addEventListener("click", function (e) {
   e.preventDefault();
-
+ 
   let dayMet = d.querySelector(".inputDayMet").value;
   if (dayMet == "25") {
     d.querySelector(".messageErrorOrCorrect1").innerHTML =
@@ -78,7 +107,8 @@ d.querySelector(".btnFollow3").addEventListener("click", function (e) {
       "<br/>Correct! 🎉🎉🎉";
     setTimeout(() => {
       d.querySelector(".formDayKiss").style.display = "none";
-      //d.querySelector("").style.display = "block";
+      d.querySelector(".love-message").style.display = "none";
+      showLastMessage();
     }, 1500);
   } else {
     d.querySelector(".messageErrorOrCorrect3").innerHTML = "<br/>Incorrect! 😒😒😒";
