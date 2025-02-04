@@ -36,11 +36,12 @@ function showLastMessage() {
       collage.style.flexDirection = "column"
       collage.style.alignItems = "center";
       collage.style.justifyContent = "center";
-      collage.style.height = "95%";
+      collage.style.height = "70%";
       collage.style.gap = "20px";
+      collage.style.top = "50%";
       textCollage.style.fontSize = "14px";
       textCollage.style.display = "flex";
-      textCollage.style.marginLeft = "260px";
+      textCollage.style.marginLeft = "300px";
       textCollage.style.marginTop = "409px";
       textCollage.style.width = "100%";
       textCollage.style.animation = "fadeIn 2s forwards";
@@ -62,6 +63,7 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
   // Show the message after the hearts stop floating
   setTimeout(() => {
     d.querySelector(".love-message").style.display = "block";
+    d.querySelector(".love-message").style.top = "35%";
     d.querySelector(".formDayMet").style.display = "block"; 
   }, timeToStop);
 });
