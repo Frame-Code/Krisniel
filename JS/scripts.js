@@ -22,18 +22,18 @@ function stopAnimation(intervalID) {
 }
 
 function showLastMessage() {
-  if(window.matchMedia("(max-width: 768px)").matches) {
+  if (window.matchMedia("(max-width: 768px)").matches) {
     let collage = d.querySelector(".collage");
     let imgCollage = d.querySelector(".imgCollage");
     let textCollage = d.querySelector(".textCollage");
     collage.style.display = "flex";
-    setTimeout( () => {
+    setTimeout(() => {
       imgCollage.style.animation = "fadeOut 3s forwards";
     }, 5000);
-    setTimeout( () => {
+    setTimeout(() => {
       imgCollage.style.display = "none";
       collage.style.display = "flex";
-      collage.style.flexDirection = "column"
+      collage.style.flexDirection = "column";
       collage.style.alignItems = "center";
       collage.style.justifyContent = "center";
       collage.style.height = "70%";
@@ -54,6 +54,15 @@ function showLastMessage() {
 d.querySelector(".btnShow").addEventListener("click", function (e) {
   e.preventDefault(); // Prevent the form from submitting
 
+  //Start the music
+  let music = d.querySelector(".music");
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+
+  //Start the animation
   let timeToStop = 3000;
   let intervalID = setInterval(createHeart, 90);
   setTimeout(() => {
@@ -63,14 +72,16 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
   // Show the message after the hearts stop floating
   setTimeout(() => {
     d.querySelector(".love-message").style.display = "block";
-    d.querySelector(".love-message").style.top = "35%";
-    d.querySelector(".formDayMet").style.display = "block"; 
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      d.querySelector(".love-message").style.top = "35%";
+    }
+    d.querySelector(".formDayMet").style.display = "block";
   }, timeToStop);
 });
 
 d.querySelector(".btnFollow1").addEventListener("click", function (e) {
   e.preventDefault();
- 
+
   let dayMet = d.querySelector(".inputDayMet").value;
   if (dayMet == "25") {
     d.querySelector(".messageErrorOrCorrect1").innerHTML =
@@ -80,7 +91,8 @@ d.querySelector(".btnFollow1").addEventListener("click", function (e) {
       d.querySelector(".formDayAnniversary").style.display = "block";
     }, 1500);
   } else {
-    d.querySelector(".messageErrorOrCorrect1").innerHTML = "<br/>Incorrect! 😒😒😒";
+    d.querySelector(".messageErrorOrCorrect1").innerHTML =
+      "<br/>Incorrect! 😒😒😒";
   }
 });
 
@@ -96,7 +108,8 @@ d.querySelector(".btnFollow2").addEventListener("click", function (e) {
       d.querySelector(".formDayKiss").style.display = "block";
     }, 1500);
   } else {
-    d.querySelector(".messageErrorOrCorrect2").innerHTML = "<br/>Incorrect! 😒😒😒";
+    d.querySelector(".messageErrorOrCorrect2").innerHTML =
+      "<br/>Incorrect! 😒😒😒";
   }
 });
 
@@ -113,6 +126,7 @@ d.querySelector(".btnFollow3").addEventListener("click", function (e) {
       showLastMessage();
     }, 1500);
   } else {
-    d.querySelector(".messageErrorOrCorrect3").innerHTML = "<br/>Incorrect! 😒😒😒";
+    d.querySelector(".messageErrorOrCorrect3").innerHTML =
+      "<br/>Incorrect! 😒😒😒";
   }
 });
