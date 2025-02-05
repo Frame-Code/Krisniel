@@ -1,280 +1,284 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 20px;
 }
 
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: #0077cc;
-    color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: #0077cc;
+  color: white;
 }
 
 header h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    color: #e0e0e0;
+  font-size: 1.2rem;
+  color: #e0e0e0;
 }
 
 main {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .post img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .show {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button {
-    background-color: #0077cc;
-    color: white;
-    padding: 15px 28px;
-    text-decoration: none;
-    margin-bottom: 20px;
-    font-family: Arial, sans-serif;
-    border-radius: 10px;
-    margin: auto;
-    border: 1px;
-    box-shadow: 3px 3px 3px #4a6e86;
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 28px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px;
+  box-shadow: 3px 3px 3px #4a6e86;
 }
 
 button:hover {
-    background-color: #005fa3;
+  background-color: #005fa3;
 }
 
 .hearts-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .heart {
-    position: absolute;
-    bottom: 0;
-    font-size: 24px;
-    color: #ff4081;
-    animation: floatUp 1.5s linear infinite;
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  color: #ff4081;
+  animation: floatUp 1.5s linear infinite;
 }
 
-.love-message, .formDayMet, .formDayAnniversary, .formDayKiss, .collage {
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
+.love-message,
+.formDayMet,
+.formDayAnniversary,
+.formDayKiss,
+.collage {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .date {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
-    form {
-        width: 95%;
-    }
-
-    .love-message, .formDayMet, .formDayAnniversary, .formDayKiss, .collage {
-        background: rgba(0, 0, 0, 0.815);
-        font-size: 22px;
-        padding: 20px auto;
-    }
-    .love-message {
-        top: 40%;
-    }
-    
-    .formDayMet{
-        margin-top: 45px;
-        top: 57%;
-    }
-    
-    .formDayAnniversary {
-        margin-top: 15px;
-        top: 60%;
-    }
-    
-    .formDayKiss {
-        margin-top: 15px;
-        top: 55%;
-    }
-
-    input {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-
-    .collage {
-        flex-direction: column; 
-        text-align: center;
-        height: 60%;
-    }
-
-    .collage img {
-        display: flex;
-        flex-direction: column; 
-        width: 30%;
-        order: -1;
-    }
-
-    .collage section {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-left: 300px;
-        margin-top: 500px;
-        width: 100%;
-        font-size: 10px;
-        text-align: center;
-    }
-}
-
-.love-message {
-    top: 14%;
-}
-
-.formDayMet{
-    top: 55%;
-}
-
-.formDayAnniversary {
-    top: 57%;
-}
-
-.formDayKiss {
-    top: 55%;
-}
-
-.collage {
-    align-items: center;
-    justify-content: center; 
-    gap: 27px;
-    max-width: 956px;
-    margin: auto;
-    padding: 20px;
-    font-size: 20px;
-    top: 50%;
+  form {
     width: 95%;
-    flex-direction: row;
-}
+  }
 
-.collage section {
-    width: 55%; 
-    
-}
+  .love-message,
+  .formDayMet,
+  .formDayAnniversary,
+  .formDayKiss,
+  .collage {
+    background: rgba(0, 0, 0, 0.815);
+    font-size: 22px;
+    padding: 20px auto;
+  }
+  .love-message {
+    top: 40%;
+  }
 
-.collage p {
-    font-weight: normal;
-}
+  .formDayMet {
+    margin-top: 45px;
+    top: 57%;
+  }
 
+  .formDayAnniversary {
+    margin-top: 15px;
+    top: 60%;
+  }
 
-.collage img {
-    width: 97%;
-    max-width: 377px;
-    border-radius: 7px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
+  .formDayKiss {
+    margin-top: 15px;
+    top: 55%;
+  }
 
-input {
+  input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid #ccc;
+  }
+
+  .collage {
+    flex-direction: column;
+    text-align: center;
+    height: 60%;
+  }
+
+  .collage img {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    order: -1;
+  }
+
+  .collage section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 300px;
+    margin-top: 500px;
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+.love-message {
+  top: 14%;
+}
+
+.formDayMet {
+  top: 55%;
+}
+
+.formDayAnniversary {
+  top: 57%;
+}
+
+.formDayKiss {
+  top: 55%;
+}
+
+.collage {
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  max-width: 956px;
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  top: 50%;
+  width: 95%;
+  flex-direction: row;
+}
+
+.collage section {
+  width: 55%;
+}
+
+.collage p {
+  font-weight: normal;
+}
+
+.collage img {
+  width: 97%;
+  max-width: 377px;
+  border-radius: 7px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .btnFollow {
-    font-size: 20px;
-    padding: 10px 80px;
+  font-size: 20px;
+  padding: 10px 80px;
 }
 
 footer {
-    text-align: center;
-    margin-top: 50px;
-    padding: 10px;
-    background-color: #333;
-    color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
 }
 
 @keyframes floatUp {
-    0% {
-        transform: translateY(0);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-    
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
 }
 
 @keyframes floatUpDisappearing {
-    0% {
-        transform: translateY(0);
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-    
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, -60%);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        display: none;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
