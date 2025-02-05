@@ -58,8 +58,6 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
   let music = d.querySelector(".music");
   if (music.paused) {
     music.play();
-  } else {
-    music.pause();
   }
 
   //Start the animation

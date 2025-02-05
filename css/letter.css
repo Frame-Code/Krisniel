@@ -12,13 +12,35 @@ body {
   background-color: #ff758f;
 }
 
+button {
+  background-color: #0077cc;
+  color: white;
+  padding: 15px 28px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  border-radius: 10px;
+  margin: auto;
+  border: 1px;
+  box-shadow: 3px 3px 3px #4a6e86;
+  width: 500px;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.happy-valentines {
+    display: none;
+}
+
 .valentines-day-card {
   position: relative;
   width: 400px;
   height: 300px;
   background-color: #ff8fa3;
   overflow: hidden;
-  border: 10px solid white;
   border-radius: 10px;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
 }
@@ -162,6 +184,23 @@ body {
   top: 19px;
 }
 
+@media (max-width: 768px) {
+    .happy-valentines {
+        width: 321px;
+        margin: auto;
+    }
+
+    .valentines-day-card {
+        width: 319px;
+        height: 296px;
+    }
+
+    .text {
+        margin-left: -30px;
+    }
+
+}
+
 @keyframes up {
   0% {
     transform: translateY(0);
@@ -178,6 +217,11 @@ body {
   100% {
     transform: translateY(-450px);
   }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .text {
