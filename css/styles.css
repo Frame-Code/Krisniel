@@ -175,6 +175,19 @@ button:hover {
   }
 }
 
+/*Resolution phone of the my girl and my phone*/
+@media (max-width: 420px) and (orientation: portrait) {
+  .collage {
+    height: 76%;
+  }
+
+  .formDayKiss {
+    margin-top: 27px;
+  }
+
+}
+
+
 .love-message {
   top: 14%;
 }

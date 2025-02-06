@@ -1,4 +1,7 @@
-d = document;
+const d = document;
+let textLetter = d.querySelector(".text");
+
+verifyClassList();
 
 d.querySelector(".btnShow").addEventListener("click", function (e) {
   let music = d.querySelector(".music");
@@ -15,23 +18,31 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
 });
 
 d.querySelector(".valentines-day-card").addEventListener("click", function (e) {
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    d.querySelector(".text").innerHTML =
+  if (window.matchMedia("(max-width: 420px)").matches) {
+    textLetter.innerHTML =
       "You're the best thing that ever happened to me!";
-    d.querySelector(".text").style.fontSize = "24px";
-    d.querySelector(".text").style.width = "304px";
-    d.querySelector(".text").style.left = "35px";
+    textLetter.style.fontSize = "24px";
+    textLetter.style.width = "304px";
+    textLetter.style.left = "35px";
   }
 });
+
 
 d.querySelector(".valentines-day-card").addEventListener(
   "dblclick",
   function (e) {
-    if (window.matchMedia("(max-width: 768px)").matches) {
-      d.querySelector(".text").innerHTML = "Happy Valentine's Day!";
-      d.querySelector(".text").style.fontSize = "28px";
-      d.querySelector(".text").style.width = "304px";
-      d.querySelector(".text").style.left = "35px";
+    if (window.matchMedia("(max-width: 420px)").matches) {
+      textLetter.innerHTML = "Happy Valentine's Day!";
+      textLetter.style.fontSize = "28px";
+      textLetter.style.width = "304px";
+      textLetter.style.left = "35px";
     }
   }
 );
+
+function verifyClassList() {
+  if (window.matchMedia("(max-width: 420px)").matches) {
+    textLetter.classList.add("disabled-hover");
+  }
+}
+

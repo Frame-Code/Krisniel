@@ -1,5 +1,5 @@
 /*
-The following code was taked from lenadesing.org
+The following code was taked from lenadesing.org (with some changes by with me)
 From this link: https://lenadesign.org/2022/02/04/pure-css-valentines-day-animation/#google_vignette
 */
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
@@ -184,7 +184,7 @@ button:hover {
   top: 19px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 420px) {
     .happy-valentines {
         width: 321px;
         margin: auto;
@@ -245,11 +245,30 @@ button:hover {
   text-align: center;
 }
 
+
 .text:hover span {
   display: none;
 }
+/*
+.text.hoverSpan {
+  display: none;
+}
+
+.text.hoverBefore {
+  content: "You're the best thing that ever happened to me!";
+  font-size: 25px;
+}
+*/
 
 .text:hover:before {
   content: "You're the best thing that ever happened to me!";
   font-size: 25px;
+} 
+
+.disabled-hover.text:hover span {
+  display: inline;
+}
+
+.disabled-hover.text:hover::before {
+  content: "";
 }

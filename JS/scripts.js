@@ -28,24 +28,33 @@ function showLastMessage() {
     let textCollage = d.querySelector(".textCollage");
     collage.style.display = "flex";
     setTimeout(() => {
-      imgCollage.style.animation = "fadeOut 3s forwards";
+      //imgCollage.style.animation = "fadeOut 3s forwards";
     }, 5000);
+    
     setTimeout(() => {
       imgCollage.style.display = "none";
       collage.style.display = "flex";
       collage.style.flexDirection = "column";
       collage.style.alignItems = "center";
       collage.style.justifyContent = "center";
-      collage.style.height = "70%";
+      /*Resolution phone of the my girl and my phone*/
+      if(window.matchMedia("(max-width: 420px)").matches) {
+        collage.style.height = "55%";
+        textCollage.style.marginLeft = "350px";
+        textCollage.style.marginTop = "350px";
+      } else {
+        collage.style.height = "70%";
+        textCollage.style.marginLeft = "300px";
+        textCollage.style.marginTop = "409px";
+      }
       collage.style.gap = "20px";
       collage.style.top = "50%";
       textCollage.style.fontSize = "14px";
       textCollage.style.display = "flex";
-      textCollage.style.marginLeft = "300px";
-      textCollage.style.marginTop = "409px";
+
       textCollage.style.width = "100%";
       textCollage.style.animation = "fadeIn 2s forwards";
-    }, 7000);
+    }, 7000); 
   } else {
     d.querySelector(".collage").style.display = "flex";
   }
@@ -63,10 +72,12 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
   //Start the animation
   let timeToStop = 3000;
   let intervalID = setInterval(createHeart, 90);
+  
   setTimeout(() => {
     stopAnimation(intervalID);
   }, timeToStop);
-
+  
+  
   // Show the message after the hearts stop floating
   setTimeout(() => {
     d.querySelector(".love-message").style.display = "block";
