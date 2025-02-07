@@ -18,7 +18,7 @@ d.querySelector(".btnShow").addEventListener("click", function (e) {
 });
 
 d.querySelector(".valentines-day-card").addEventListener("click", function (e) {
-  if (window.matchMedia("(max-width: 424px)").matches) {
+  if (window.matchMedia("(max-width: 500px)").matches) {
     textLetter.innerHTML =
       "You're the best thing that ever happened to me!";
     textLetter.style.fontSize = "24px";
@@ -31,7 +31,7 @@ d.querySelector(".valentines-day-card").addEventListener("click", function (e) {
 d.querySelector(".valentines-day-card").addEventListener(
   "dblclick",
   function (e) {
-    if (window.matchMedia("(max-width: 424px)").matches) {
+    if (window.matchMedia("(max-width: 500px)").matches) {
       textLetter.innerHTML = "Happy Valentine's Day!";
       textLetter.style.fontSize = "28px";
       textLetter.style.width = "304px";
@@ -41,7 +41,7 @@ d.querySelector(".valentines-day-card").addEventListener(
 );
 
 function verifyClassList() {
-  if (window.matchMedia("(max-width: 424px)").matches) {
+  if (window.matchMedia("(max-width: 500px)").matches) {
     textLetter.classList.add("disabled-hover");
   }
 }

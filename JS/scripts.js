@@ -35,7 +35,7 @@ function showLastMessage() {
       collage.style.alignItems = "center";
       collage.style.justifyContent = "center";
       /*Resolution phone of the my girl and my phone*/
-      if(window.matchMedia("(max-width: 424px)").matches) {
+      if(window.matchMedia("(max-width: 500px)").matches) {
         collage.style.height = "55%";
         textCollage.style.marginLeft = "350px";
         textCollage.style.marginTop = "350px";

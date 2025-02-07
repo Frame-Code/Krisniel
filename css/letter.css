@@ -184,10 +184,10 @@ button:hover {
   top: 19px;
 }
 
-@media (max-width: 424px) {
+@media (max-width: 500px) {
     .happy-valentines {
-        width: 321px;
-        margin: auto;
+        width: 350px;
+        margin: 100px;
     }
 
     .valentines-day-card {
