@@ -27,10 +27,7 @@ function showLastMessage() {
     let imgCollage = d.querySelector(".imgCollage");
     let textCollage = d.querySelector(".textCollage");
     collage.style.display = "flex";
-    setTimeout(() => {
-      //imgCollage.style.animation = "fadeOut 3s forwards";
-    }, 5000);
-    
+
     setTimeout(() => {
       imgCollage.style.display = "none";
       collage.style.display = "flex";
@@ -38,7 +35,7 @@ function showLastMessage() {
       collage.style.alignItems = "center";
       collage.style.justifyContent = "center";
       /*Resolution phone of the my girl and my phone*/
-      if(window.matchMedia("(max-width: 420px)").matches) {
+      if(window.matchMedia("(max-width: 424px)").matches) {
         collage.style.height = "55%";
         textCollage.style.marginLeft = "350px";
         textCollage.style.marginTop = "350px";
